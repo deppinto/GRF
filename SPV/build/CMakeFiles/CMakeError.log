@@ -1,0 +1,59 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /mnt/c/Users/Diogop/Documents/MEGA/cenas/CellGPU/SPV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a79a0/fast"
+make: Warning: File 'Makefile' has modification time 0.79 s in the future
+/usr/bin/make -f CMakeFiles/cmTC_a79a0.dir/build.make CMakeFiles/cmTC_a79a0.dir/build
+make[1]: Entering directory '/mnt/c/Users/Diogop/Documents/MEGA/cenas/CellGPU/SPV/build/CMakeFiles/CMakeTmp'
+make[1]: Warning: File 'CMakeFiles/cmTC_a79a0.dir/flags.make' has modification time 0.73 s in the future
+Building C object CMakeFiles/cmTC_a79a0.dir/CheckSymbolExists.c.o
+/usr/bin/gcc-7   -fPIC    -o CMakeFiles/cmTC_a79a0.dir/CheckSymbolExists.c.o   -c /mnt/c/Users/Diogop/Documents/MEGA/cenas/CellGPU/SPV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_a79a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a79a0.dir/link.txt --verbose=1
+/usr/bin/gcc-7 -fPIC     -rdynamic CMakeFiles/cmTC_a79a0.dir/CheckSymbolExists.c.o  -o cmTC_a79a0 
+CMakeFiles/cmTC_a79a0.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_a79a0.dir/build.make:97: recipe for target 'cmTC_a79a0' failed
+make[1]: *** [cmTC_a79a0] Error 1
+make[1]: Leaving directory '/mnt/c/Users/Diogop/Documents/MEGA/cenas/CellGPU/SPV/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_a79a0/fast' failed
+make: *** [cmTC_a79a0/fast] Error 2
+
+File /mnt/c/Users/Diogop/Documents/MEGA/cenas/CellGPU/SPV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /mnt/c/Users/Diogop/Documents/MEGA/cenas/CellGPU/SPV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f4cad/fast"
+make: Warning: File 'Makefile' has modification time 0.8 s in the future
+/usr/bin/make -f CMakeFiles/cmTC_f4cad.dir/build.make CMakeFiles/cmTC_f4cad.dir/build
+make[1]: Entering directory '/mnt/c/Users/Diogop/Documents/MEGA/cenas/CellGPU/SPV/build/CMakeFiles/CMakeTmp'
+make[1]: Warning: File 'CMakeFiles/cmTC_f4cad.dir/flags.make' has modification time 0.71 s in the future
+Building C object CMakeFiles/cmTC_f4cad.dir/CheckFunctionExists.c.o
+/usr/bin/gcc-7   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f4cad.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f4cad
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f4cad.dir/link.txt --verbose=1
+/usr/bin/gcc-7 -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_f4cad.dir/CheckFunctionExists.c.o  -o cmTC_f4cad -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_f4cad.dir/build.make:97: recipe for target 'cmTC_f4cad' failed
+make[1]: *** [cmTC_f4cad] Error 1
+make[1]: Leaving directory '/mnt/c/Users/Diogop/Documents/MEGA/cenas/CellGPU/SPV/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_f4cad/fast' failed
+make: *** [cmTC_f4cad/fast] Error 2
+
+
