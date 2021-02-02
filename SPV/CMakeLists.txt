@@ -67,11 +67,6 @@ set(HEADERS
 foreach(ARG 
         voronoi
         Vertex
-	Povray_pos
-	MSD_calc_cluster
-	tension
-	clusters
-	percT
         )
 add_executable("${ARG}.out" "${ARG}.cpp" )
 target_link_libraries("${ARG}.out"
