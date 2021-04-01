@@ -172,12 +172,12 @@ void voronoiModelBase::setSubstratePreferencesRnd(int SubIntType, double mean, i
 
                             double distx=xi-xx;
                             if(distx<-dx/2)distx=distx+dx;
-                            if(distx>dx/2)distx=distx-dx;
+                            if(distx>=dx/2)distx=distx-dx;
                             double disty=yi-yy;
                             if(disty<-dx/2)disty=disty+dx;
-                            if(disty>dx/2)disty=disty-dx;
+                            if(disty>=dx/2)disty=disty-dx;
 
-                            if(distx*distx+disty*disty<radius*radius)
+                            if(distx*distx+disty*disty<=radius*radius)
                             {
                                 avg+=sub1[site];
                                 num++;
