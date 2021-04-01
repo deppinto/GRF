@@ -167,7 +167,7 @@ void voronoiModelBase::setSubstratePreferencesRnd(int SubIntType, double mean, i
                             if(xx>=dx)xx=xx-dx;
                             int yy=y+j;
                             if(yy<0)yy=yy+dx;
-                            if(yy>=dx)y=yy-dx;
+                            if(yy>=dx)yy=yy-dx;
                             int site=xx+yy*dx;
 
                             double distx=xi-xx;
